@@ -1,0 +1,21 @@
+{
+  "name": "zeta-node",
+  "version": "1.0.0",
+  "description": "An APL chapter website",
+  "main": "apsi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "A-Psi",
+    "Chapter",
+    "Zeta",
+    "Fraternity"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alobban/zeta-node.git"
+  },
+  "author": "Andrew Lobban",
+  "license": "MIT"
+}
