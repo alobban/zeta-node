@@ -1,0 +1,32 @@
+{
+  "name": "zeta-node",
+  "description": "An APL chapter website",
+  "main": "apsi.js",
+  "authors": [
+    "Andrew Lobban"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "A-Psi",
+    "Chapter",
+    "Zeta",
+    "Fraternity"
+  ],
+  "homepage": "https://github.com/alobban/zeta-node",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.3",
+    "bootstrap": "^3.3.6"
+  }
+}
