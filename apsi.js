@@ -4,9 +4,7 @@ var cors = require("cors");
 var MongoClient = require("mongodb").MongoClient;
 var app = express();
 
-MongoClient.connect("mongodb://localhost:27017/zeta", function(err, db) {
-
-});
+MongoClient.connect("mongodb://localhost:27017/zeta");
 
 app.use(express.static(__dirname + "/public"));
 
