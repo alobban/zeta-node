@@ -62,6 +62,12 @@ $(function() {
 	// 	$('.navbar-brand h1').html('Alpha Psi Lambda <span class="subhead">Zeta Chapter</span>');
 	// }
 
+	// Autocollapsing toggle button
+    $('.nav a').on('click', function(){
+ 	//  $('.btn-navbar').click(); //bootstrap 2.x
+        $('.navbar-toggle').click() //bootstrap 3.x by Richard
+    });
+
 	
 	//Use smooth scrolling when clicking on navigation
 	$('.navbar a[href*=#]:not([href=#])').click(function() {
