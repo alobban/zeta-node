@@ -7,6 +7,7 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+var nodemon = require('gulp-nodemon');
 
 // Move angular to local directory
 gulp.task('scripts', function () {
@@ -23,4 +24,18 @@ gulp.task('styles', function () {
 		.pipe(gulp.dest('public/css'));
 });
 
-gulp.task('default', ['scripts', 'styles']);
+gulp.task('server', function() {
+	nodemon({
+		script: 'apsi.js',
+		ext: 'js',
+		env: {
+			PORT:3001
+		},
+		ignore: ['./node_module/**', './bower_components/**', './public/**']
+	})
+	.on('restart', function() {
+		console.log('we have restarted!');
+	});
+});
+
+gulp.task('default', ['scripts', 'styles', 'server']);
