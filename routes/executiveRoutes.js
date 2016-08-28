@@ -7,7 +7,7 @@ var routes = function(Executive) {
 
     var executiveRouter = express.Router();
 
-    executiveRouter.route('/executives')
+    executiveRouter.route('/')
         .post(function(req, res) {
             var exec = new Executive(req.body);
 
@@ -27,7 +27,7 @@ var routes = function(Executive) {
             // res.json(responseJson);
         });
 
-    executiveRouter.route('/executives/:executiveId')
+    executiveRouter.route('/:executiveId')
         .get(function(req, res) {
             // var responseJson = { hello: 'this is my api!' };
             Executive.findById(req.params.executiveId, function(err, executive) {

@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 
 executiveRouter = require('./routes/executiveRoutes')(Executive);
 
-app.use('/api', executiveRouter);
+app.use('/api/executives', executiveRouter);
 
 
 app.use(express.static(__dirname + "/public"));
