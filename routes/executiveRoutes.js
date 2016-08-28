@@ -37,7 +37,7 @@ var routes = function(Executive) {
                 next();
             }
             else {
-                res.status(404).send('no executive member found!');
+                res.status(404).send('no executive member found');
             }
         });
     });
@@ -93,6 +93,16 @@ var routes = function(Executive) {
                 }
                 else {
                     res.json(req.executive);
+                }
+            });
+        })
+        .delete(function(req, res) {
+            req.executive.remove(function(err) {
+                if(err) {
+                    res.status(500).send(err);
+                }
+                else {
+                    res.status(204).send('Removed');
                 }
             });
         });
