@@ -6,7 +6,7 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var executiveModel = new Schema({
-    executives: {
+    board_member: {
         term: {
             semester: { type: String },
             year: { type: String }
