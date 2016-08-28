@@ -57,8 +57,44 @@ var routes = function(Executive) {
             req.executive.board_member.position = req.body.board_member.position;
             req.executive.board_member.term.semester = req.body.board_member.term.semester;
             req.executive.board_member.term.year = req.body.board_member.term.year;
-            req.executive.save();
-            res.json(req.executive);
+
+            req.executive.save(function(err) {
+                if(err) {
+                    res.status(500).send(err);
+                }
+                else {
+                    res.json(req.executive);
+                }
+            });
+        })
+        .patch(function(req, res) {
+            if(req.body._id)
+                delete req.body._id;
+
+            if(req.body.board_member.position) {
+                req.executive.board_member.position = req.body.board_member.position;
+            }
+
+            if(req.body.board_member.term) {
+                for (var p in req.body.board_member.term){
+                    req.executive.board_member.term[p] = req.body.board_member.term[p];
+                }
+            }
+
+            if(req.body.board_member.member) {
+                for (var p in req.body.board_member.member){
+                    req.executive.board_member.member[p] = req.body.board_member.member[p];
+                }
+            }
+
+            req.executive.save(function(err) {
+                if(err) {
+                    res.status(500).send(err);
+                }
+                else {
+                    res.json(req.executive);
+                }
+            });
         });
 
     return executiveRouter;
