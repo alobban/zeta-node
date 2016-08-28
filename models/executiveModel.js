@@ -11,15 +11,15 @@ var executiveModel = new Schema({
             semester: { type: String },
             year: { type: String }
         },
-        post: { type: String },
+        position: { type: String },
         member: {
             first_name: { type: String },
             last_name: {type: String },
             nickname: { type: String },
             number: { type: String },
-            line_name: { type: String },
+            // line_name: { type: String },
             major: { type: String },
-            minor: { type: String },
+            // minor: { type: String },
             bio: { type: String }
         }
     }
