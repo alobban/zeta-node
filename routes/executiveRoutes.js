@@ -20,23 +20,45 @@ var routes = function(Executive) {
             // var responseJson = { hello: 'this is my api!' };
             Executive.find(function(err, executives) {
                 if(err)
-                    console.log(err);
+                    res.status(500).send(err);
                 else
                     res.json(executives);
             });
             // res.json(responseJson);
         });
 
+    executiveRouter.use('/:executiveId', function(req, res, next) {
+        Executive.findById(req.params.executiveId, function(err, executive) {
+            if(err) {
+                res.status(500).send(err);
+            }
+            else if (executive) {
+                req.executive = executive;
+                next();
+            }
+            else {
+                res.status(404).send('no executive member found!');
+            }
+        });
+    });
     executiveRouter.route('/:executiveId')
         .get(function(req, res) {
-            // var responseJson = { hello: 'this is my api!' };
-            Executive.findById(req.params.executiveId, function(err, executive) {
-                if(err)
-                    console.log(err);
-                else
-                    res.json(executive);
-            });
-            // res.json(responseJson);
+
+            res.json(req.executive);
+
+        })
+        .put(function(req, res) {
+            req.executive.board_member.member.first_name = req.body.board_member.member.first_name;
+            req.executive.board_member.member.last_name = req.body.board_member.member.last_name;
+            req.executive.board_member.member.nickname = req.body.board_member.member.nickname;
+            req.executive.board_member.member.number = req.body.board_member.member.number;
+            req.executive.board_member.member.major = req.body.board_member.member.major;
+            req.executive.board_member.member.bio = req.body.board_member.member.bio;
+            req.executive.board_member.position = req.body.board_member.position;
+            req.executive.board_member.term.semester = req.body.board_member.term.semester;
+            req.executive.board_member.term.year = req.body.board_member.term.year;
+            req.executive.save();
+            res.json(req.executive);
         });
 
     return executiveRouter;
