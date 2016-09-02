@@ -316,7 +316,7 @@ footer .navbar-nav>li a:hover {
 /****** Mobile Fonts ******/
 
 @media only screen
-and (max-width: 768px) {
+and (max-width: 992px) {
 	.fa-zeta, .fa-alpha, .fa-lambda, .fa-psi {
 		font-family: "Times New Roman", sans-serif;
 	}
