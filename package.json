@@ -4,7 +4,10 @@
   "description": "An APL chapter website",
   "main": "apsi.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "lite": "lite-server",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w"
   },
   "keywords": [
     "A-Psi",
@@ -23,7 +26,25 @@
     "cors": "^2.7.1",
     "express": "^4.13.4",
     "mongodb": "^2.1.14",
-    "mongoose": "^4.5.5"
+    "mongoose": "^4.5.5",
+
+    "@angular/common": "~2.1.1",
+    "@angular/compiler": "~2.1.1",
+    "@angular/core": "~2.1.1",
+    "@angular/forms": "~2.1.1",
+    "@angular/http": "~2.1.1",
+    "@angular/platform-browser": "~2.1.1",
+    "@angular/platform-browser-dynamic": "~2.1.1",
+    "@angular/router": "~3.1.1",
+    "@angular/upgrade": "~2.1.1",
+
+    "angular-in-memory-web-api": "~0.1.13",
+    "bootstrap": "^3.3.7",
+    "systemjs": "0.19.39",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "5.0.0-beta.12",
+    "zone.js": "^0.6.26"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
@@ -35,6 +56,12 @@
     "gulp-sass": "^2.2.0",
     "gulp-uglify": "^1.5.3",
     "jshint": "^2.9.1",
-    "jshint-stylish": "^2.1.0"
+    "jshint-stylish": "^2.1.0",
+
+    "@types/core-js": "^0.9.34",
+    "@types/node": "^6.0.45",
+    "concurrently": "^3.0.0",
+    "lite-server": "^2.2.2",
+    "typescript": "^2.0.3"
   }
 }
