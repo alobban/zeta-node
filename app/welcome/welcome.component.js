@@ -9,20 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 /**
- * Created by andrewlobban on 10/28/16.
+ * Created by andrewlobban on 10/30/16.
  */
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var WelcomeComponent = (function () {
+    function WelcomeComponent() {
     }
-    AppComponent = __decorate([
+    WelcomeComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            templateUrl: './app/app.component.html'
+            selector: 'apl-welcome',
+            templateUrl: './app/welcome/welcome.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], WelcomeComponent);
+    return WelcomeComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.WelcomeComponent = WelcomeComponent;
+//# sourceMappingURL=welcome.component.js.map

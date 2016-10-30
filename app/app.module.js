@@ -15,18 +15,20 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var router_1 = require('@angular/router');
 var app_component_1 = require('./app.component');
+var welcome_component_1 = require('./welcome/welcome.component');
+var history_component_1 = require('./history/history.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot([
-                    // { path: 'history', component: HistoryComponent },
-                    // { path: 'welcome', component: WelcomeComponent },
-                    { path: '', component: app_component_1.AppComponent },
-                    { path: '**', component: app_component_1.AppComponent }
+                    { path: 'history', component: history_component_1.HistoryComponent },
+                    { path: 'welcome', component: welcome_component_1.WelcomeComponent },
+                    { path: '', component: history_component_1.HistoryComponent },
+                    { path: '**', component: history_component_1.HistoryComponent }
                 ])],
-            declarations: [app_component_1.AppComponent],
+            declarations: [app_component_1.AppComponent, history_component_1.HistoryComponent, welcome_component_1.WelcomeComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

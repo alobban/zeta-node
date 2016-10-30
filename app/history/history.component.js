@@ -9,20 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 /**
- * Created by andrewlobban on 10/28/16.
+ * Created by andrewlobban on 10/30/16.
  */
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var HistoryComponent = (function () {
+    function HistoryComponent() {
     }
-    AppComponent = __decorate([
+    HistoryComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            templateUrl: './app/app.component.html'
+            selector: 'apl-history',
+            templateUrl: './app/history/history.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], HistoryComponent);
+    return HistoryComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.HistoryComponent = HistoryComponent;
+//# sourceMappingURL=history.component.js.map

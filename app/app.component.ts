@@ -4,10 +4,6 @@
 import { Component } from '@angular/core';
 @Component({
     selector: 'my-app',
-    template: `
-        <ul class="nav navbar-nav">
-            <li><a [routerLink]="['/welcome']">Home</a></li>
-            <li><a [routerLink]="['/history']">History</a></li>
-        </ul>`
+    templateUrl: './app/app.component.html'
 })
 export class AppComponent { }
