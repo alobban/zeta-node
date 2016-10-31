@@ -12,8 +12,8 @@ import { HistoryComponent }   from './history/history.component';
     imports:      [ BrowserModule, RouterModule.forRoot([
         { path: 'history', component: HistoryComponent },
         { path: 'welcome', component: WelcomeComponent },
-        { path: '', component: HistoryComponent },
-        { path: '**', component: HistoryComponent }
+        { path: '', component: WelcomeComponent },
+        { path: '**', component: WelcomeComponent }
     ]) ],
     declarations: [ AppComponent, HistoryComponent, WelcomeComponent ],
     bootstrap:    [ AppComponent ]

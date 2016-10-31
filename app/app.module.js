@@ -25,8 +25,8 @@ var AppModule = (function () {
             imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot([
                     { path: 'history', component: history_component_1.HistoryComponent },
                     { path: 'welcome', component: welcome_component_1.WelcomeComponent },
-                    { path: '', component: history_component_1.HistoryComponent },
-                    { path: '**', component: history_component_1.HistoryComponent }
+                    { path: '', component: welcome_component_1.WelcomeComponent },
+                    { path: '**', component: welcome_component_1.WelcomeComponent }
                 ])],
             declarations: [app_component_1.AppComponent, history_component_1.HistoryComponent, welcome_component_1.WelcomeComponent],
             bootstrap: [app_component_1.AppComponent]
